@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nossa Jornada Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="splash-screen">
+        <div class="loader">
+            <i class="fa-solid fa-heart fa-beat" style="color: #1ed760; font-size: 3rem;"></i>
+            <p>A preparar memórias...</p>
+        </div>
+    </div>
+
+    <div id="particles-container"></div>
+
+    <audio id="bg-music" src="Bloco_dos_Apaixonados.mp3" loop preload="auto"></audio>
+
+    <section id="view-dashboard" class="view">
+        <div class="dash-scroll-container">
+            
+            <div class="spotify-header">
+                <i class="fa-solid fa-chevron-down"></i>
+                <span class="playlist-label">Juntos para sempre ❤️</span>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+
+            <div class="dash-player">
+                <div class="playlist-cover shadow-pop">
+                    <img src="mapa_estrelar.png" alt="Capa Nossa Jornada">
+                </div>
+                
+                <div class="title-row">
+                    <div>
+                        <h1>A Nossa História</h1>
+                        <p class="artist">Camilly e Kawan</p>
+                    </div>
+                    <i class="fa-solid fa-circle-check" style="color: #1ed760; font-size: 1.2rem;"></i>
+                </div>
+
+                <div class="audio-progress">
+                    <div class="time-current">0:00</div>
+                    <div class="progress-track"><div class="progress-fill"></div></div>
+                    <div class="time-total">3:45</div>
+                </div>
+
+                <div class="spotify-controls">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <button id="btn-play-music" class="play-btn">
+                        <i class="fa-solid fa-play" style="margin-left: 4px;"></i>
+                    </button>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-repeat"></i>
+                </div>
+            </div>
+
+            <div class="dash-section">
+                <h3 class="section-title">Sobre o casal</h3>
+                <div class="couple-banner">
+                    <img src="6.jpeg" alt="Nós">
+                    <div class="banner-overlay"></div>
+                </div>
+                <h2 class="couple-names">Camilly e Kawan</h2>
+                <p class="couple-date">Juntos desde o início</p>
+                
+                <div id="live-timer" class="time-grid"></div>
+            </div>
+
+            <div class="dash-section">
+                <h3 class="section-title">Alguns momentos nossos </h3>
+                <div class="dash-gallery">
+                    <div class="dash-gal-item"><img src="1.jpeg"><span>Nossa primeira foto</span></div>
+                    <div class="dash-gal-item"><img src="10.jpeg"><span>Beijinhos totosos</span></div>
+                    <div class="dash-gal-item"><img src="4.jpeg"><span>Nossas brincadeiras</span></div>
+                </div>
+            </div>
+
+            <div class="dash-section">
+                <div class="title-row" style="margin-bottom: 10px;">
+                    <h3 class="section-title" style="margin:0;">Conquistas</h3>
+                    <span class="view-all">Ver tudo</span>
+                </div>
+                <div class="achievements-grid">
+                    <div class="achieve-icon active-achieve"><i class="fa-solid fa-heart"></i></div>
+                    <div class="achieve-icon active-achieve"><i class="fa-solid fa-kiss"></i></div>
+                    <div class="achieve-icon active-achieve"><i class="fa-solid fa-fire"></i></div>
+                    <div class="achieve-icon"><i class="fa-solid fa-gem"></i></div>
+                </div>
+            </div>
+
+            <div class="retro-banner pulse-glow" id="btn-start-stories">
+                <h2>Nossa Retrospectiva <i class="fa-solid fa-heart"></i></h2>
+                <p>Explore o nosso tempo</p>
+            </div>
+
+            <div style="height: 50px;"></div>
+        </div>
+    </section>
+
+
+    <section id="view-stories" class="view">
+        <div class="story-progress-container" id="progress-container"></div>
+
+        <div class="scenes-container">
+            
+            <div class="scene" data-scene="0">
+                <div class="scene-content gradient-1">
+                    <h3 class="super-title fade-in-up">CAPÍTULO 1</h3>
+                    <h2 class="scene-title fade-in-up delay-1">O Início Mágico</h2>
+                    <p class="subtitle fade-in-up delay-2" style="font-size: 2.1rem;">Era inverno, num dia muito aleatório... O céu estava assim e tudo foi mágico. Não foi sorte, foi destino.</p>
+                </div>
+            </div>
+
+            <div class="scene" data-scene="1">
+                <div class="scene-content gradient-2 interactive-layer">
+                    <h2 class="scene-title">Nossas Memórias</h2>
+                    <p class="subtitle" style="font-size: 0.9rem; margin-bottom: 20px;"><i class="fa-solid fa-hand-pointer"></i> Toque para virar a foto</p>
+                    
+                    <div class="card-stack" id="memoryStack">
+                        <div class="flip-card stack-card active-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front"><img src="8.jpeg" alt="Memória 1"></div>
+                                <div class="flip-card-back handwriting">O dia em que meu coração acelerou como nunca.</div>
+                            </div>
+                        </div>
+                        <div class="flip-card stack-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front"><img src="3.jpeg" alt="Memória 2"></div>
+                                <div class="flip-card-back handwriting">Nosso melhor abraço guardado num sorriso.</div>
+                            </div>
+                        </div>
+                        <div class="flip-card stack-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front"><img src="12.jpeg" alt="Memória 3"></div>
+                                <div class="flip-card-back handwriting">Você transforma qualquer lugar no melhor do mundo.</div>
+                            </div>
+                        </div>
+                        <div class="flip-card stack-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front"><img src="19.jpeg" alt="Memória 4"></div>
+                                <div class="flip-card-back handwriting">Risadas que eu quero escutar para o resto da vida.</div>
+                            </div>
+                        </div>
+                        <div class="flip-card stack-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front"><img src="22.jpeg" alt="Memória 5"></div>
+                                <div class="flip-card-back handwriting">Eu amo absolutamente tudo em você.</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button id="btnNextMemory" class="btn-ghost hidden" style="margin-top: 20px;">Próxima Foto <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="scene" data-scene="2">
+                <div class="scene-content gradient-3 interactive-layer">
+                    <h2 class="scene-title text-light">Minha Paixão</h2>
+                    <p class="subtitle" style="font-size: 0.9rem; margin-bottom: 20px;"><i class="fa-solid fa-hand-pointer"></i> Toque para ler o que sinto</p>
+                    
+                    <div class="flip-card single-poem-card" id="poemCard">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="18.jpeg" alt="Camilly">
+                            </div>
+                            <div class="flip-card-back poem-bg handwriting">
+                                Camilly, minha doce paixão,<br>
+                                Como o inverno, me aqueceu,<br>
+                                Doce como o dia aleatório,<br>
+                                Que o destino me deu você.<br>
+                                Foi mágico, sem explicação.<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene" data-scene="3">
+                <div class="scene-content gradient-4">
+                    <h2 class="impact-text final-question">Admite: eu sou a sua pessoa favorita no mundo, né?</h2>
+                    
+                    <div class="decision-area">
+                        <button id="btn-yes" class="btn-premium yes">ÓBVIO QUE SIM</button>
+                        <button id="btn-no" class="btn-premium no">NEM PENSAR</button>
+                    </div>
+
+                    <div id="success-msg" class="hidden">
+                        <h2 class="impact-text text-glow">Eu sabia! ❤️</h2>
+                        <h1 class="subtitle">Amo-te demais.</h1>
+                        <h1 class="subtitle">Espero poder te dar o melhor que posso futuramente minha paixão!</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
